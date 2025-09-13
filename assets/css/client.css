@@ -1,0 +1,80 @@
+:root {
+    --vino: #6E3B3B;
+    --rojo: #AC3F21;
+    --naranja: #BE6A15;
+    --amarillo: #F3CF7A;
+}
+
+.bg-vino {
+    background-color: var(--vino) !important;
+}
+
+.bg-naranja {
+    background-color: var(--naranja) !important;
+}
+
+.text-vino {
+    color: var(--vino);
+}
+
+.btn-buscar {
+    background-color: var(--rojo);
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-buscar:hover {
+    background-color: var(--naranja);
+    color: #fff;
+}
+
+.propiedad-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-cita {
+    background-color: var(--vino);
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.btn-cita:hover {
+    background-color: var(--rojo);
+    color: #fff;
+}
+
+/* Solicitar Cita */
+.solicitar-cita-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.solicitar-cita-form h2 {
+    font-weight: bold;
+}
+
+.solicitar-cita-form label {
+    font-weight: 600;
+    color: var(--vino);
+}
+
+/* Perfil Cliente */
+.perfil-cliente {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-cliente h2 {
+    font-weight: bold;
+}
+
+.perfil-cliente label {
+    font-weight: 600;
+    color: var(--vino);
+}

@@ -1,0 +1,149 @@
+:root {
+    --vino: #6E3B3B;
+    --rojo: #AC3F21;
+    --naranja: #BE6A15;
+    --amarillo: #F3CF7A;
+}
+
+.bg-rojo {
+    background-color: var(--rojo) !important;
+}
+
+.text-vino {
+    color: var(--vino);
+}
+
+.kpi-card {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.acceso-card {
+    border-radius: 10px;
+}
+
+.btn-inmobiliaria {
+    background-color: var(--naranja);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.btn-inmobiliaria:hover {
+    background-color: var(--vino);
+    color: #fff;
+}
+
+/* Mis Propiedades */
+.mis-propiedades {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mis-propiedades h2 {
+    font-weight: bold;
+}
+
+.table thead th {
+    background-color: var(--vino);
+    color: #fff;
+}
+
+/* Solicitudes */
+.solicitudes {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.solicitudes h2 {
+    font-weight: bold;
+}
+
+.table thead th {
+    background-color: var(--vino);
+    color: #fff;
+}
+
+/* Perfil Inmobiliaria */
+.perfil-inmobiliaria {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-inmobiliaria h2 {
+    font-weight: bold;
+}
+
+.perfil-inmobiliaria label {
+    font-weight: 600;
+    color: var(--vino);
+}
+
+/* Nueva Propiedad */
+.nueva-propiedad {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nueva-propiedad h2 {
+    font-weight: bold;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+/* Editar Propiedad */
+.editar-propiedad {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.editar-propiedad h2 {
+    font-weight: bold;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+/* Ver Propiedad */
+.ver-propiedad {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ver-propiedad img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.ver-propiedad h3 {
+    font-weight: bold;
+}
+
+/* Ver Solicitud */
+.ver-solicitud {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ver-solicitud h5 {
+    font-weight: bold;
+    color: var(--vino);
+}

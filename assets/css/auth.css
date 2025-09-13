@@ -1,0 +1,400 @@
+/* ========================================
+   CSS PARA PÁGINAS DE AUTENTICACIÓN
+   (LOGIN, REGISTRO, FORGOT PASSWORD)
+   ======================================== */
+
+/* Variables específicas para auth */
+:root {
+    --auth-gradient-start: #667eea;
+    --auth-gradient-end: #764ba2;
+    --auth-primary: #007bff;
+    --auth-primary-dark: #0056b3;
+    --auth-shadow: rgba(0, 123, 255, 0.15);
+    --auth-border-radius: 15px;
+}
+
+/* Container principal de auth */
+.login-container,
+.register-container,
+.auth-container {
+    min-height: calc(100vh - 120px);
+    background: linear-gradient(135deg, var(--auth-gradient-start) 0%, var(--auth-gradient-end) 100%);
+    padding: 40px 0;
+    position: relative;
+}
+
+/* Efecto de partículas de fondo */
+.login-container::before,
+.register-container::before,
+.auth-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Tarjeta principal */
+.login-card,
+.register-card,
+.auth-card {
+    border: none;
+    border-radius: var(--auth-border-radius);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Header de la tarjeta */
+.auth-card .card-header,
+.login-card .card-header,
+.register-card .card-header {
+    border-bottom: none;
+    background: linear-gradient(135deg, var(--auth-primary), var(--auth-primary-dark)) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-card .card-header::before,
+.login-card .card-header::before,
+.register-card .card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="0,100 100,0 100,100" fill="rgba(255,255,255,0.1)"/></svg>');
+}
+
+/* Formularios */
+.auth-form,
+.login-form,
+.register-form {
+    position: relative;
+}
+
+/* Campos de entrada mejorados */
+.form-control-lg {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    padding: 15px 20px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-control-lg:focus {
+    border-color: var(--auth-primary);
+    box-shadow: 0 0 0 0.2rem var(--auth-shadow);
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+/* Etiquetas de formulario */
+.form-group label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Grupos de entrada con iconos */
+.input-group .form-control-lg {
+    border-right: none;
+}
+
+.input-group-append .btn {
+    border-radius: 0 10px 10px 0;
+    border: 2px solid #e9ecef;
+    border-left: none;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.input-group .form-control-lg:focus+.input-group-append .btn {
+    border-color: var(--auth-primary);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Botones principales */
+.btn-primary.btn-lg {
+    background: linear-gradient(135deg, var(--auth-primary), var(--auth-primary-dark));
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary.btn-lg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary.btn-lg:hover::before {
+    left: 100%;
+}
+
+.btn-primary.btn-lg:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--auth-shadow);
+}
+
+/* Botones secundarios */
+.btn-outline-primary {
+    border-radius: 10px;
+    border: 2px solid var(--auth-primary);
+    padding: 12px 25px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--auth-shadow);
+}
+
+/* Checkboxes personalizados */
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid #dee2e6;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.form-check-input:checked {
+    background-color: var(--auth-primary);
+    border-color: var(--auth-primary);
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-left: 8px;
+}
+
+/* Alertas mejoradas */
+.alert {
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #51cf66, #40c057);
+    color: white;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #ffd43b, #fab005);
+    color: #495057;
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #339af0, #228be6);
+    color: white;
+}
+
+/* Enlaces de autenticación */
+.auth-links a,
+.login-links a,
+.register-links a {
+    color: var(--auth-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.auth-links a:hover,
+.login-links a:hover,
+.register-links a:hover {
+    color: var(--auth-primary-dark);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* Separadores */
+.auth-divider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #dee2e6;
+}
+
+.auth-divider small {
+    background: white;
+    padding: 0 15px;
+    color: #6c757d;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animaciones de entrada */
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.auth-card,
+.login-card,
+.register-card {
+    animation: slideInUp 0.6s ease-out;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+
+    .login-container,
+    .register-container,
+    .auth-container {
+        padding: 20px 10px;
+        min-height: calc(100vh - 100px);
+    }
+
+    .auth-card,
+    .login-card,
+    .register-card {
+        margin: 0;
+        border-radius: 10px;
+    }
+
+    .card-body {
+        padding: 1.5rem !important;
+    }
+
+    .form-control-lg {
+        padding: 12px 15px;
+    }
+
+    .btn-primary.btn-lg {
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .auth-container,
+    .login-container,
+    .register-container {
+        padding: 15px 5px;
+    }
+
+    .card-body {
+        padding: 1rem !important;
+    }
+
+    .btn-lg {
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   DARK MODE SUPPORT (OPCIONAL)
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+
+    .auth-card,
+    .login-card,
+    .register-card {
+        background: rgba(33, 37, 41, 0.95);
+        color: #ffffff;
+    }
+
+    .form-control-lg {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #495057;
+        color: #ffffff;
+    }
+
+    .form-control-lg::placeholder {
+        color: #adb5bd;
+    }
+
+    .form-group label {
+        color: #e9ecef;
+    }
+}
+
+/* ========================================
+   VALIDACIÓN VISUAL
+   ======================================== */
+.was-validated .form-control:valid {
+    border-color: #28a745;
+    background-image: none;
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+    background-image: none;
+}
+
+.invalid-feedback {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: #dc3545;
+}
+
+.valid-feedback {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: #28a745;
+}

@@ -1,0 +1,117 @@
+:root {
+    --vino: #6E3B3B;
+    --rojo: #AC3F21;
+    --naranja: #BE6A15;
+    --amarillo: #F3CF7A;
+}
+
+/* Sidebar */
+.bg-sidebar {
+    background-color: var(--vino) !important;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+.sidebar-heading {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.list-group-item:hover {
+    background-color: var(--rojo) !important;
+    color: #fff !important;
+}
+
+/* Navbar */
+.btn-toggle {
+    background-color: var(--rojo);
+    color: #fff;
+}
+
+.btn-toggle:hover {
+    background-color: var(--naranja);
+}
+
+/* Cards */
+.card-dashboard {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-dashboard .text-icon {
+    color: var(--vino);
+}
+
+.btn-dashboard {
+    background-color: var(--rojo);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.btn-dashboard:hover {
+    background-color: var(--naranja);
+    color: #fff;
+}
+
+/*crear propiedad*/
+/* Formulario Propiedades */
+.propiedades-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.propiedades-form h2 {
+    font-weight: bold;
+}
+
+.propiedades-form label {
+    font-weight: 600;
+    color: var(--vino);
+}
+
+/*REPORTES*/
+.kpi-card {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.kpi-card h3 {
+    font-weight: bold;
+}
+
+.bg-vino {
+    background-color: var(--vino) !important;
+}
+
+/* Configuración */
+.configuracion-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.configuracion-section h3 {
+    font-weight: bold;
+}
+
+.configuracion-section label {
+    font-weight: 600;
+    color: var(--vino);
+}
